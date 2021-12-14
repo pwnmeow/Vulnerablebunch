@@ -20,6 +20,7 @@ WARNING "GET /favicon.ico HTTP/1.1" 404 9350
 INFO "GET /login HTTP/1.1" 301 0
 INFO "GET /login/ HTTP/1.1" 200 7978
 INFO "GET /a10_lab?username=Hacker&password=Hacker HTTP/1.1" 301 0
+INFO "GET /a10_lab?username=jack&password=jacktheripper HTTP/1.1" 301 0
 INFO "GET /logout HTTP/1.1" 301 0
 INFO "GET /logout/ HTTP/1.1" 200 1207
 INFO "GET /static/login/css/base.css HTTP/1.1" 304 0

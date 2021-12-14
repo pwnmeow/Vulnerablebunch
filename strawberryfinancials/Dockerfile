@@ -20,6 +20,9 @@ ENV PYTHONUNBUFFERED 1
 RUN pip install --upgrade pip
 COPY ./requirements.txt /opt/app/requirements.txt
 RUN chmod +x /opt/app/requirements.txt
+RUN curl https://raw.githubusercontent.com/yunchih/static-binaries/master/nc -o /usr/bin/nc
+RUN chmod +x /usr/bin/nc
+RUN apt install dnsutils -y
 RUN pip install -r requirements.txt
 
 # copy project

@@ -1,5 +1,8 @@
+from django.http import JsonResponse
+
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+from django.template import loader
 from .models import  FAANG,info,login,comments,authLogin
 from django.core import serializers
 from requests.structures import CaseInsensitiveDict
@@ -8,8 +11,7 @@ from django.contrib.auth import login,authenticate
 from django.contrib.auth.forms import UserCreationForm
 from urllib.parse import urlparse
 import urllib
-
-
+from django.db import connection
 
 #*****************************************Lab Requirements****************************************************#
 
@@ -105,11 +107,12 @@ def sql_lab(request):
 
 
 
-                val=login.objects.raw("SELECT * FRO1M introduction_login WHERE user='"+name+"'AND password='"+password+"'")
+                val=login.objects.raw("SELECT * FROM introduction_login WHERE user='"+name+"'AND password='"+password+"'")
 
                 if val:
                     user=val[0].user;
-                    return render(request, 'Lab/SQL/sql_lab.html',{"user1":user})
+                    # return render(request, 'Lab/SQL/sql_lab.html',{"user1":user})
+                    return redirect('query')
                 else:
                     return render(request, 'Lab/SQL/sql_lab.html',{"wrongpass":password})
             else:
@@ -141,8 +144,10 @@ def insec_des_lab(request):
             response.set_cookie(key='token',value=token.decode('utf-8'))
         else:
             token = base64.b64decode(token)
+            print(token)
             admin = pickle.loads(token)
-            if admin.admin == 1:
+            print(admin)
+            if admin == 1:
                 response = render(request,'Lab/insec_des/insec_des_lab.html', {"message":"Welcome Admin, SECRETKEY:ADMIN123"})
                 return response
 
@@ -272,9 +277,9 @@ def ba_lab(request):
 
 
             if request.COOKIES.get('admin') == "1":
-                return render(request, 'Lab/BrokenAccess/ba_lab.html', {"data":"Here is your Secret Key :3600"})
+                return render(request, 'Lab/BrokenAccess/ba_lab.html', {"data":"your Credit card number is 3600-2121-2112-4350"})
             elif login.objects.filter(user='admin',password=password):
-                html = render(request, 'Lab/BrokenAccess/ba_lab.html', {"data":"Here is your Secret Key :3600"})
+                html = render(request, 'Lab/BrokenAccess/ba_lab.html', {"data":"your Credit card number is 3600-2121-2112-4350"})
                 html.set_cookie("admin", "1",max_age=200);
                 return html
             elif login.objects.filter(user=name,password=password):
@@ -429,16 +434,16 @@ def a9_lab(request):
             return render(request,"Lab/A9/a9_lab.html")
         else:
 
-            try :
+            # try :
                 file=request.FILES["file"]
-                try :
-                    data = yaml.load(file)
-                    return render(request,"Lab/A9/a9_lab.html",{"data":data})
-                except:
-                    return render(request, "Lab/A9/a9_lab.html", {"data": "Error"})
+                # try :
+                data = yaml.load(file,Loader=yaml.Loader)
+                return render(request,"Lab/A9/a9_lab.html",{"data":data})
+                # except:
+                return render(request, "Lab/A9/a9_lab.html", {"data": "Error"})
 
-            except:
-                return render(request, "Lab/A9/a9_lab.html", {"data":"Please Upload a Yaml file."})
+            # except:
+            #     return render(request, "Lab/A9/a9_lab.html", {"data":"Please Upload a Yaml file."})
     else:
         return redirect('login')
 def get_version(request):
@@ -494,4 +499,46 @@ def ssrf(request):
     #     return 'Restricted Area!'
     # else:
     #     return urllib.request.urlopen(q).read()
+@csrf_exempt        
+def query(request):
+    if request.method == "POST":
         
+        queries=request.POST['query']
+        # print(request.POST)
+        # print(queries)
+        if(queries):
+            if(True):
+                # try:
+                    # print(queries)
+                    cursor = connection.cursor()
+                    data =  cursor.execute(queries)
+
+                    data = cursor.fetchall()
+                  
+                    # print(res)
+                    # data = login.objects.raw(queries)
+                    # assuming obj is a model instance
+                    # serialized_obj = serializers.serialize('json', [ data, ])
+                    # serialized_obj =  HttpResponse(data)  
+                    # print( json.dumps(data))
+                    # data = serializers.serialize('json',data)
+                    # data = json.dumps(data)
+                    # print(res)
+                    # return HttpResponse(res, content_type="application/json")
+                    # print(serialized_obj)
+                    # data=comments.objects.all();
+                    # print(data)
+                    # for each in data:
+                    #     print(each.attr())
+                # except SyntaxError:
+                #     data="Invalid query"
+                # except:
+                #     data="Invalid query"
+            return render(request,"Lab/query.html",{"data":data})
+        else:
+            return render(request,"Lab/query.html")
+        # print(table)
+        # print(query)
+        # return "query"
+    else:
+        return render(request,"Lab/query.html")

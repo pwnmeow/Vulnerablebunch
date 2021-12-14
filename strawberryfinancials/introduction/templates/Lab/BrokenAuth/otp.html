@@ -27,9 +27,9 @@
 </div>
 <br />
 <div class="container">
-  {% if otp %}
-  <h3 align="center">Your 3 Digit Verification Code:<i>{{otp}}</i></h3>
-  {% endif %}
+  {% comment %} {% if otp %} {% endcomment %}
+  {% comment %} <h3 align="center">Your 3 Digit Verification Code:<i>{{otp}}</i></h3> {% endcomment %}
+  {% comment %} {% endif %} {% endcomment %}
 </div>
 <!-- In case any issue with the code please mail the administrator through this mail id : "admin@strawberryfinancials.com" -->
 {% endblock %}
