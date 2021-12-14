@@ -1,0 +1,32 @@
+{% extends "introduction/base.html" %} {% block content %} {% block title %}
+<title>Admin</title>
+{% endblock %}
+
+<div class="jumbotron bg-themed">
+  <h4 style="text-align: center">Login as Admin</h4>
+  <div class="hero__form w-50 m-auto" style="text-align: center">
+    <form method="post" action="/bau_lab">
+      {% csrf_token %}
+      <input id="input" type="text" name="name" placeholder="User Name" class="form-control" /><br />
+      <input
+      class="form-control"
+        id="input"
+        type="password"
+        name="pass"
+        placeholder="Password"
+      /><br /><br />
+      <a href="/login_otp"><u>Login With OTP</u></a
+      ><br />
+      <button style="margin-top: 20px" class="site-btn" type="submit">
+        Log in
+      </button>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+  {% if wrongpass %}
+  <h4>Wrong Password Try Using Login With OTP</h4>
+  {% endif %}
+</div>
+{% endblock %}

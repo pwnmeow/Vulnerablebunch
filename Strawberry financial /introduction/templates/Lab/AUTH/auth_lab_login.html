@@ -1,0 +1,39 @@
+{% extends "introduction/base.html" %} {% block content %} {% block title %}
+<title>Login</title>
+{% endblock %}
+
+<div class="jumbotron bg-themed">
+  <div class="hero__form w-50 m-auto" style="text-align: center">
+    <form method="post" action="/auth_lab/login">
+      {% csrf_token %}
+      <input
+        id="input"
+        type="text"
+        name="username"
+        placeholder="User Name"
+        class="form-control"
+        required
+      /><br />
+      <input
+        id="input"
+        type="password"
+        name="pass"
+        class="form-control"
+        placeholder="Password"
+        required
+      /><br />
+      <button style="margin-top: 20px" class="site-btn" type="submit">
+        Login
+      </button>
+    </form>
+  </div>
+  <br />
+  <div style="text-align: center">
+    <button onclick="window.location.href='/auth_lab'" class="btn btn-text">
+      Register?
+    </button>
+  </div>
+</div>
+
+<i>{{ err_msg }}</i>
+{% endblock %}

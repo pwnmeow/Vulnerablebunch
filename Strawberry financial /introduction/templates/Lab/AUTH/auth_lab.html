@@ -1,0 +1,48 @@
+{% extends "introduction/base.html" %} {% block content %} {% block title %}
+<title>Register</title>
+{% endblock %}
+
+<div class="jumbotron bg-themed">
+  <h4 style="text-align: center">Can You Log in as other user?</h4>
+  <div class="login" style="text-align: center">
+    <button
+      style="margin-top: 20px"
+      class="site-btn"
+      onclick="location.href = '/auth_lab/signup'"
+    >
+      Sign up
+    </button>
+    <!-- <button
+      style="margin-top: 20px"
+      class="site-btn"
+      onclick="location.href = '/auth_lab/login'"
+    >
+      Log in
+    </button> -->
+    <button
+    style="margin-top: 20px"
+    class="site-btn"
+    onclick="location.href = '/login'"
+  >
+    Login
+  </button>
+    <button
+    style="margin-top: 20px"
+    class="site-btn"
+    onclick="location.href = '/login_otp'"
+  >
+    Login with Otp
+  </button>
+  <button
+  style="margin-top: 20px"
+  class="site-btn"
+  onclick="location.href = '/super_admin'"
+>
+  Super Admin
+</button>
+  <!-- /ba_lab -->
+  </div>
+</div>
+<br />
+<i>{{ err_msg }}</i>
+{% endblock %}

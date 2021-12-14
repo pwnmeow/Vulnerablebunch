@@ -1,0 +1,37 @@
+{% extends "introduction/base.html" %} {% load static %} {% block content %} 
+{% block title %}
+<title> Logging & Monitoring</title>
+{% endblock %}
+
+<div class="jumbotron bg-themed">
+  <div class="hero__form w-50 m-auto">
+  <h4 style="text-align: center" class="mb-2">DevOp Login.</h4>
+  <!-- The Logs have been Leaked. -->
+  <div class="login">
+    <form method="post" action="/a10_lab">
+      {% csrf_token %}
+      <input id="input" type="text" name="name" placeholder="User Name" class="form-control" /><br />
+      <input
+        id="input"
+        type="password"
+        name="pass"
+        class="form-control"
+        placeholder="Password"
+      /><br />
+      <button style="margin-top: 20px" class="site-btn" type="submit">
+        Log in
+      </button>
+    </form>
+  </div>
+</div>
+</div>
+
+<div class="container">
+  {% if name %}
+  <h2>Logged in as {{name}}</h2>
+  {% else %}
+  <h2>{{error}}</h2>
+  {% endif %}
+</div>
+
+{% endblock %}

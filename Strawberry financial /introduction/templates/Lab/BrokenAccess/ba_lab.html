@@ -1,0 +1,32 @@
+{% extends "introduction/base.html" %} {% load static %} {% block content %} {% block title %}
+<title>Login Admin.</title>
+{% endblock %}
+
+<div class="jumbotron bg-themed">
+  <div class="hero__form w-50 m-auto">
+  <h4 style="text-align: center">Super Admin</h4>
+  <!-- Admins Have the Secretkey -->
+  <div class="login mt-2">
+    <form method="post" action="/super_admin">
+      <input class="form-control" id="input" type="text" name="name" placeholder="User Name" /><br />
+      <input
+        id="input"
+        type="password"
+        class="form-control"
+        name="pass"
+        placeholder="Password"
+      /><br />
+      <button style="margin-top: 20px" class="site-btn" type="submit">
+        Log in
+      </button>
+    </form>
+  </div>
+</div>
+</div>
+<div class="container text-center mb-4">
+  {% if data %}
+  <h2>{{data}}</h2>
+  {% endif %}
+</div>
+
+{% endblock %}

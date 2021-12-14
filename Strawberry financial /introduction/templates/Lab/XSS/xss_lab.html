@@ -1,0 +1,41 @@
+{% extends "introduction/base.html" %}
+{% block content %}
+{% block title %}
+<title>Search It</title>
+{% endblock  %}
+
+
+
+
+    <div class="jumbotron bg-themed" style="align:center">
+        <div class="hero__form w-50 m-auto">
+        <h2 align="center">Search It</h2>
+        <form method="get" action="/search-it">
+        <label for="search" class="text-left"><b>Company Name:  <b></label>
+        <input id="search" type="text" class="form-control mb-2" name="q" placeholder="Facebook">
+            <button  class="site-btn" type="submit" >
+           Go
+            </button>
+         </form>
+     </div>
+
+</div><br>
+<div class="display w-50 m-auto">
+    {% if company %}
+    <h3>Company Name :        <i>{{company}}</i></h3>
+    <h3>Ceo Name     :          <i>{{ceo}}</i></h3>
+    <h3>About        :        <i>{{about}}</i></h3>
+    {% elif query %}
+    <h3> The company '{{query|safe}}' You searched for is not found</h3>
+    {% else %}
+
+    {% endif %}
+
+
+</div>
+
+
+
+{% endblock content %}
+
+
