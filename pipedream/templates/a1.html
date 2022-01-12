@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %} {% block body %}
+<div class="my-4">
+  <div class="container">
+    <form action="">
+      <div class="form-group">
+        <label for="">Search:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          placeholder="search here..."
+          value="{{ name }}"
+        />
+      </div>
+    </form>
+
+    <h2>you searched for <b> {{ name }} </b>:</h2>
+    <p>Ooops! we couldn't find what you are looking for</p>
+  </div>
+</div>
+{% endblock %}

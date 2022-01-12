@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %} {% block body %}
+<div class="mt-120 ">
+  <div class="container">
+    <h2>Welcome! <b>{{ username }}</b></h2>
+    <p>Upload sitemap for site: /site-map</p>
+    <form action="/admin/welcome" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="">Upload xml file</label>
+        <input type="file" name="file" id="" class="form-control">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    <a href="/admin/logout">logout</a>
+  </div>
+</div>
+
+{% endblock %}
