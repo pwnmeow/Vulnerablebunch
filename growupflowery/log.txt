@@ -1,0 +1,225 @@
+
+
+2022-01-28T18:03:39.173Z #> Error: User: null does not exist
+ 
+2022-01-28T18:03:39.173Z #> Exception: there was some problem loggin username: admin password: admin
+
+2022-01-30T19:17:11.331Z #> Error: Failed to lookup view "forgot-password" in views directory "/home/ques/Documents/python/growupflowery/app/views"
+ 
+ 
+
+2022-01-30T19:42:33.920Z #> TypeError: profile.getUserByUserName is not a function
+ 
+ 
+
+2022-01-30T19:48:09.498Z #> Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+ 
+ 
+
+2022-01-30T19:48:41.322Z #> Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+ 
+ 
+
+2022-01-30T19:50:19.361Z #> Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+
+2022-01-30T19:50:19.361Z #> Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+      const token = md5(username);
+      fpassword.addToken(userId, token, (err, user) => { // after adding token to db sent an email
+       throw userId not found
+ 
+ 
+   {
+    _id: 61f6ea8c12aeba102f20c312,
+    userId: 1,
+    token: '21232f297a57a5a743894a0e4a801fc3'
+  },
+  {
+    _id: 61f6eb16d6632c10afe1db77,
+    userId: 1,
+    token: '21232f297a57a5a743894a0e4a801fc3'
+  },
+  {
+    _id: 61f6eb794e0c5e111319c600,
+    userId: 1,
+    token: '21232f297a57a5a743894a0e4a801fc3'
+  },
+
+
+2022-01-30T20:15:01.201Z #> MongoError: Modifiers operate on fields but we found type string instead. For example: {$mod: {<field>: ...}} not {$set: "12345"}
+ 
+ 
+
+2022-01-30T20:15:49.908Z #> Error: Invalid password
+ 
+ 
+
+2022-01-30T20:18:42.689Z #> Error: User: null does not exist
+ 
+ 
+
+2022-01-30T20:19:53.395Z #> Error: Failed to lookup view "index" in views directory "/home/ques/Documents/python/growupflowery/app/views"
+ 
+ 
+
+2022-01-30T20:19:54.758Z #> Error: Failed to lookup view "index" in views directory "/home/ques/Documents/python/growupflowery/app/views"
+ 
+ 
+
+2022-01-30T20:24:40.590Z #> Error: Failed to lookup view "index" in views directory "/home/ques/Documents/python/growupfloweryviews"
+ 
+ 
+
+2022-01-30T20:26:08.748Z #> Error: Failed to lookup view "index" in views directory "/home/ques/Documents/python/growupfloweryviews"
+ 
+ 
+
+2022-01-30T20:26:38.696Z #> Error: Failed to lookup view "index" in views directory "/home/ques/Documents/python/growupfloweryviews"
+ 
+ 
+
+2022-01-30T20:26:51.340Z #> Error: User: null does not exist
+ 
+ 
+
+2022-01-30T20:31:00.386Z #> ERROR: No allocations found for the user
+ 
+ 
+
+2022-02-01T16:24:16.445Z #> Error: Invalid password
+ 
+ 
+
+2022-02-01T16:24:25.399Z #> Error: Invalid password
+ 
+ 
+
+2022-02-01T16:24:31.743Z #> Error: Invalid password
+ 
+ 
+
+2022-02-01T16:59:11.089Z #> Error: Reserved keyword "if" attempted to be used as a variable on line 46 in file /home/ques/Documents/python/growupflowery/views/advance.html.
+ 
+ 
+
+2022-02-01T16:59:12.998Z #> Error: Reserved keyword "if" attempted to be used as a variable on line 46 in file /home/ques/Documents/python/growupflowery/views/advance.html.
+ 
+ 
+
+2022-02-01T17:04:33.975Z #> TypeError: req.all is not a function
+ 
+ 
+
+2022-02-01T17:04:51.152Z #> TypeError: req.all is not a function
+ 
+ 
+
+2022-02-01T17:05:00.186Z #> TypeError: req.all is not a function
+ 
+ 
+
+2022-02-01T17:05:04.242Z #> 
+
+2022-02-01T17:08:02.925Z #> TypeError: Cannot read property 'path' of undefined
+ 
+ 
+
+2022-02-01T17:41:16.878Z #> ReferenceError: pacfile is not defined
+ 
+ 
+
+2022-02-01T17:42:03.404Z #> ReferenceError: pacfile is not defined
+ 
+ 
+
+2022-02-01T17:42:08.941Z #> ReferenceError: pac is not defined
+ 
+ 
+
+2022-02-01T17:42:35.880Z #> Error: Line 1: Unexpected identifier
+ 
+ 
+
+2022-02-01T18:14:59.468Z #> TypeError: Cannot read property 'cart' of undefined
+ 
+ 
+
+2022-02-01T18:15:24.314Z #> TypeError: Cannot read property 'cart' of undefined
+ 
+ 
+
+2022-02-01T18:15:26.308Z #> TypeError: Cannot read property 'cart' of undefined
+ 
+ 
+
+2022-02-01T18:15:31.245Z #> TypeError: Cannot read property 'cart' of undefined
+ 
+ 
+
+2022-02-01T18:22:42.918Z #> TypeError: Cannot read property 'cart' of undefined
+ 
+ 
+
+2022-02-01T18:50:20.089Z #> ReferenceError: serialize is not defined
+ 
+ 
+
+2022-02-01T18:51:01.433Z #> SyntaxError: Unexpected token � in JSON at position 0
+ 
+ 
+
+2022-02-01T18:54:48.522Z #> TypeError: obj is not a function
+ 
+ 
+
+2022-02-01T18:57:13.056Z #> TypeError [ERR_INVALID_ARG_TYPE]: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Object
+ 
+ 
+
+2022-02-01T18:58:14.336Z #> TypeError [ERR_INVALID_ARG_TYPE]: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Object
+ 
+ 
+
+2022-02-01T18:59:16.070Z #> SyntaxError: Unexpected token e in JSON at position 0
+ 
+ 
+
+2022-02-01T19:04:12.486Z #> ReferenceError: serialize is not defined
+ 
+ 
+
+2022-02-02T16:06:35.991Z #> ERROR: No allocations found for the user
+ 
+ 
+
+2022-02-02T16:29:59.296Z #> TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received an instance of Object
+ 
+ 
+
+2022-02-02T17:02:50.883Z #> Error: Line 1: Unexpected token <
+ 
+ 
+
+2022-02-02T20:43:37.209Z #> ReferenceError: libxmljs is not defined
+ 
+ 
+
+2022-02-02T22:45:48.195Z #> TypeError: Cannot read property 'path' of undefined
+ 
+ 
+
+2022-02-02T22:45:56.534Z #> Error: Unexpected tag "= data" on line 38 in file /home/kali/Desktop/shaunproj/nodeFinal/growupflowery/views/products.html.
+ 
+ 
+
+2022-02-02T22:49:23.566Z #> TypeError: Cannot read property 'path' of undefined
+ 
+ 
+
+2022-02-02T23:08:12.994Z #> TypeError: Cannot read property 'path' of undefined
+ 
+ 
+
+2022-02-02T23:11:58.656Z #> Error: EntityRef: expecting ';'
+
+ 
+ 

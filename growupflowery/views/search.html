@@ -1,0 +1,35 @@
+{% extends './layouts/home.html' %} {% block title %}Research{% endblock %} {%
+block content %}
+
+<div class="container container-100" style="margin-top: 220px">
+  <h3 class="text-center">what are your looking for ?</h3>
+  <p>
+    Got some other offers? paste a link here, we will try to get you the best we
+    could.
+  </p>
+  <form
+    method="get"
+    action="/search"
+    role="search"
+    style="position: relative"
+  >
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control control-search"
+        value=""
+        autocomplete="off"
+        placeholder="Enter Search ...| https://www.fnp.com/flowers"
+        aria-label="SEARCH"
+        name="url"
+      />
+    </div>
+
+    <div class="form-group">
+      <button class="button_search btn btn-default" type="submit">
+        search
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}
